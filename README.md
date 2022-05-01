@@ -40,13 +40,16 @@ wget -P weigths https://paddledet.bj.bcebos.com/models/mot/fairmot_dla34_30e_108
 ```
 2. Run the inference to generate the detections
 ```
-sh run.sh
+sh run.sh $INPUT_VIDEO_PATH
 ```
-3. Transform 2d positions to 3d positions and generate speed estimation
-```
-python speed_estimation.py [$OUTPUT of detection](default stored at output/mot_results)
-```
-4. Generate visualization
-```
-python vis.py
-```
+
+
+## Results
+Output results
+1. The detection results are in output/mot_outputs/
+1. The speed estimation results are in output/speed_est.csv
+2. The speed estimation demo videos are in output/output_spd.mp4
+
+## To improve
+1. The pretained tracking model can be finetune on CCTV vehicle videos.
+2. The camera calibration can be improved with EDA if more measurements can be provided(e.g. GPS information).
