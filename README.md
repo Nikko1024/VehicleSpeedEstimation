@@ -6,13 +6,13 @@ This repo aims to detect and track vehicles from a single view camera recording.
  - speed estimation
 
 ### Vehicle Detection and Tracking
-This part generates bounding box and id for each vehicle. The part is based on PaddlePaddle(https://github.com/PaddlePaddle/PaddleDetection).
+This part generates bounding box and id for each vehicle. The part is based on PaddlePaddle(https://github.com/PaddlePaddle/PaddleDetection). The detection and tracking is a joint based on [fairmot](https://arxiv.org/abs/2004.01888).
 
 ### 2d to 3d transformation
 Based on the provided measurements, keypoints are selected and because the world points are one a plane, homographic transformation is estimated and conducted.
 
 ### speed estimation
-Speed is estimated from the detected 3d coordinates of cars.
+Speed is estimated from the detected 3d coordinates of cars. Using the distance&time between frames and frames to calculate the speed.
 
 ## Set up
 1. install paddlepaddle
